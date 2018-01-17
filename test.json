@@ -1,0 +1,43 @@
+[
+  {
+    "type":"2",  //类型，2-岗位，3-人
+    "name":"岗位名称",
+    "duty":[
+      {
+        "control_code":"xxxx",
+        "control_name":"新建工单",
+        "filter_scheduling":false,
+        "next_route":[{"type":"2","name":"岗位名称"},{"type":"3","person_id":"1111","name":"人员名称"}]
+      },
+      {
+        "control_code":"xxxx",
+        "control_name":"指派",
+        "filter_scheduling":false,
+        "next_route":[{"type":"2","name":"岗位名称"},{"type":"3","person_id":"1111","name":"人员名称"}]
+      },
+      {
+        "control_code":"xxxx",
+        "control_name":"执行工作步骤",
+        "limit_domain":true,                //专业限制
+        "next_route":[{"type":"2","name":"岗位名称"},{"type":"3","person_id":"1111","name":"人员名称"}]
+      },
+      {
+        "control_code":"xxxx",
+        "control_name":"审核",
+        "audit_close_way":"1", // 审核结束方式，1-手动点击结束，2-审核后自动结束
+        "next_route":[{"type":"2","name":"岗位名称"},{"type":"3","person_id":"1111","name":"人员名称"}]
+      }
+    ]
+  },
+  {
+    "type":"2",
+    "name":"岗位名称",
+    "duty":[]
+  },
+  {
+    "type":"3",
+    "person_id":"12222",
+    "name":"张三",
+    "duty":[]
+  }
+]
